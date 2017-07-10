@@ -21,7 +21,7 @@ type Component<P> = ComponentClass<P> | StatelessComponent<P>;
 
 export type ReactNativeStyledFunction<P> = StyledFunction<P>;
 
-export interface StyledInterface extends BaseStyledInterface {
+export interface StyledInterface<ItemT=any> extends BaseStyledInterface {
   ActivityIndicator: ReactNativeStyledFunction<ReactNative.ActivityIndicatorProperties>;
   ActivityIndicatorIOS: ReactNativeStyledFunction<ReactNative.ActivityIndicatorProperties>;
 
@@ -29,6 +29,7 @@ export interface StyledInterface extends BaseStyledInterface {
   Button: ReactNativeStyledFunction<ReactNative.ButtonProperties>;
   DatePickerIOS: ReactNativeStyledFunction<ReactNative.DatePickerIOSProperties>;
   DrawerLayoutAndroid: ReactNativeStyledFunction<ReactNative.DrawerLayoutAndroidProperties>;
+  FlatList: ReactNativeStyledFunction<ReactNative.FlatListProperties<ItemT>>;
   Image: ReactNativeStyledFunction<ReactNative.ImageProperties>;
 
   KeyboardAvoidingView: ReactNativeStyledFunction<ReactNative.KeyboardAvoidingViewProps>;
@@ -48,6 +49,7 @@ export interface StyledInterface extends BaseStyledInterface {
   SnapshotViewIOS: ReactNativeStyledFunction<ReactNative.SnapshotViewIOSProperties>;
   RecyclerViewBackedScrollView: ReactNativeStyledFunction<ReactNative.RecyclerViewBackedScrollViewProperties>;
   RefreshControl: ReactNativeStyledFunction<ReactNative.RefreshControlProperties>;
+  SectionList: ReactNativeStyledFunction<ReactNative.SectionListProperties<ItemT>>;
   StatusBar: ReactNativeStyledFunction<ReactNative.StatusBarProperties>;
   SwipeableListView: ReactNativeStyledFunction<ReactNative.SwipeableListViewProps>;
   Switch: ReactNativeStyledFunction<ReactNative.SwitchProperties>;
